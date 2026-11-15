@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueBank - Banco Digital</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CADASTRO -->
+    <div id="telaCadastro">
+        <div class="formulario-cadastro">
+
+            <h1>BlueBank</h1>
+            <p>Crie sua conta de demonstração</p>
+
+            <form id="formCadastro">
+
+                <input
+                    type="text"
+                    id="nomeUsuario"
+                    placeholder="Seu nome"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="senhaUsuario"
+                    placeholder="Crie uma senha fictícia"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="confirmarSenha"
+                    placeholder="Confirme sua senha"
+                    required
+                >
+
+                <button type="submit">Criar conta</button>
+
+                <p id="mensagemCadastro"></p>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- LOGIN -->
+    <div id="telaLogin" style="display: none;">
+
+        <div class="formulario-cadastro">
+
+            <h1>BlueBank</h1>
+            <p>Entre na sua conta de demonstração</p>
+
+            <form id="formLogin">
+
+                <input
+                    type="text"
+                    id="nomeLogin"
+                    placeholder="Seu nome"
+                    required
+                >
+
+                <input
+                    type="password"
+                    id="senhaLogin"
+                    placeholder="Sua senha fictícia"
+                    required
+                >
+
+                <button type="submit">Entrar</button>
+
+                <p id="mensagemLogin"></p>
+
+            </form>
+        </div>
+    </div>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <h1>BlueBank</h1>
+        <p>Seu banco digital de demonstração</p>
+    </header>
+
+    <!-- MENU -->
+    <nav class="menu" id="menuPrincipal">
+
+        <button onclick="mostrarPagina('inicio')">
+            Início
+        </button>
+
+        <button onclick="mostrarPagina('conta')">
+            Minha Conta
+        </button>
+
+        <button onclick="mostrarPagina('extrato')">
+            Extrato
+        </button>
+
+        <button onclick="mostrarPagina('cartoes')">
+            Cartões
+        </button>
+
+    </nav>
+
+    <!-- PAINEL PRINCIPAL -->
+    <main>
+
+        <!-- DASHBOARD -->
+        <section class="dashboard">
+
+            <h2>Resumo financeiro</h2>
+
+            <div class="resumo-card">
+                <h3>Entradas</h3>
+                <p>R$ 0,00</p>
+            </div>
+
+            <div class="resumo-card">
+                <h3>Saídas</h3>
+                <p>R$ 0,00</p>
+            </div>
+
+            <div class="resumo-card">
+                <h3>Movimentações</h3>
+                <p>0</p>
+            </div>
+
+            <div class="grafico">
+
+                <h3>Visão financeira</h3>
+
+                <div class="barra-container">
+                    <p>Entradas</p>
+
+                    <div class="barra">
+                        <div id="barraEntradas"></div>
+                    </div>
+                </div>
+
+                <div class="barra-container">
+                    <p>Saídas</p>
+
+                    <div class="barra">
+                        <div id="barraSaidas"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- SALDO -->
+        <section class="saldo">
+
+            <h2>Saldo disponível</h2>
+
+            <p id="saldo">R$ 0,00</p>
+
+            <button
+                onclick="alternarSaldo()"
+                id="botaoSaldo"
+            >
+                Ocultar saldo
+            </button>
+
+        </section>
+
+        <!-- AÇÕES -->
+        <section class="acoes">
+
+            <button onclick="receberDinheiro()">
+                Receber
+            </button>
+
+            <button onclick="transferirDinheiro()">
+                Transferir
+            </button>
+
+        </section>
+
+        <!-- EXTRATO -->
+        <section class="extrato">
+
+            <h2>Últimas movimentações</h2>
+
+            <select
+                id="filtroMovimentacoes"
+                onchange="filtrarMovimentacoes()"
+            >
+                <option value="todas">
+                    Todas as movimentações
+                </option>
+
+                <option value="7">
+                    Últimos 7 dias
+                </option>
+
+                <option value="30">
+                    Últimos 30 dias
+                </option>
+            </select>
+
+            <div id="movimentacoes">
+                <p>Nenhuma movimentação ainda.</p>
+            </div>
+
+        </section>
+
+        <!-- CARTÕES -->
+        <section class="cartoes">
+
+            <h2>Meus cartões</h2>
+
+            <div class="cartao-virtual">
+
+                <p>BLUEBANK</p>
+
+                <h3>Cartão virtual</h3>
+
+                <p>**** **** **** 2026</p>
+
+                <div class="dados-cartao">
+                    <span>CLIENTE BLUEBANK</span>
+                    <span>DEMONSTRAÇÃO</span>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PERFIL -->
+        <section class="perfil">
+
+            <h2>Minha Conta</h2>
+
+            <div class="perfil-info">
+
+                <div class="avatar">P</div>
+
+                <div>
+                    <h3>Cliente BlueBank</h3>
+                    <p>Conta de demonstração</p>
+                </div>
+
+            </div>
+
+            <div class="informacoes-conta">
+
+                <p><strong>Banco:</strong> BlueBank</p>
+
+                <p><strong>Tipo:</strong> Conta digital fictícia</p>
+
+                <p><strong>Status:</strong> Ativa (demonstração)</p>
+
+            </div>
+
+            <button
+                onclick="editarPerfil()"
+                class="botao-editar"
+            >
+                Editar perfil
+            </button>
+
+            <button
+                onclick="sairDaConta()"
+                class="botao-sair"
+            >
+                Sair da conta
+            </button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

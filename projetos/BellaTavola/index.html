@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bella Tavola | Restaurante Italiano</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <meta name="description"
+        content="Conheça o Bella Tavola, restaurante italiano com sabores autênticos, pratos especiais e reservas.">
+
+    <meta name="theme-color" content="#244536">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Bella Tavola</h1>
+
+        <div class="seletor-tema">
+            <button id="temaClaro" type="button" aria-label="Ativar modo claro">
+                ☀️
+            </button>
+
+            <button id="temaEscuro" type="button" aria-label="Ativar modo escuro">
+                🌙
+            </button>
+        </div>
+
+        <button
+            class="menu-mobile"
+            id="menuMobile"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            type="button">
+            ☰
+        </button>
+
+        <nav id="menuNavegacao">
+            <a href="#inicio">Início</a>
+            <a href="#cardapio">Cardápio</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#avaliacoes">Avaliações</a>
+            <a href="#contato">Reservas</a>
+            <a href="#fale-conosco">Fale Conosco</a>
+            <a href="#faq">Dúvidas</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INÍCIO -->
+        <section id="inicio">
+            <h2>Uma experiência italiana inesquecível</h2>
+
+            <p>
+                Sabores autênticos, ingredientes selecionados
+                e momentos especiais.
+            </p>
+
+            <a href="#cardapio">Conheça nosso cardápio</a>
+        </section>
+
+        <!-- CARDÁPIO -->
+        <section id="cardapio">
+            <h2>Nosso Cardápio</h2>
+
+            <p>Uma seleção especial de sabores italianos.</p>
+
+            <div class="filtros-cardapio">
+                <button class="filtro ativo" data-categoria="todos">Todos</button>
+                <button class="filtro" data-categoria="pizza">Pizzas</button>
+                <button class="filtro" data-categoria="massa">Massas</button>
+                <button class="filtro" data-categoria="risoto">Risotos</button>
+            </div>
+
+            <div class="pesquisa-cardapio">
+                <input
+                    type="search"
+                    id="pesquisaPratos"
+                    placeholder="🔍 Buscar um prato..."
+                    aria-label="Buscar pratos pelo nome">
+            </div>
+
+            <p id="nenhumPrato" style="display: none;">
+                Nenhum prato encontrado. Tente outra pesquisa!
+            </p>
+
+            <div class="pratos">
+
+                <div class="prato" data-categoria="pizza">
+                    <img
+                        src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+                        alt="Pizza Margherita">
+
+                    <h3>Pizza Margherita</h3>
+                    <p>Molho de tomate, mozzarella e manjericão fresco.</p>
+                    <span>R$ 49,90</span>
+                </div>
+
+                <div class="prato" data-categoria="massa">
+                    <img
+                        src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80"
+                        alt="Spaghetti à Bolonhesa">
+
+                    <h3>Spaghetti à Bolonhesa</h3>
+                    <p>Massa artesanal com molho tradicional italiano.</p>
+                    <span>R$ 42,90</span>
+                </div>
+
+                <div class="prato" data-categoria="risoto">
+                    <img
+                        src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=800&q=80"
+                        alt="Risotto de Cogumelos">
+
+                    <h3>Risotto de Cogumelos</h3>
+                    <p>Arroz cremoso com cogumelos selecionados.</p>
+                    <span>R$ 54,90</span>
+                </div>
+
+            </div>
+
+            <a
+                href="cardapio_bella_tavola.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="botao-cardapio-pdf">
+                📄 Ver cardápio completo (PDF)
+            </a>
+        </section>
+
+        <!-- SOBRE -->
+        <section id="sobre">
+            <div class="sobre-conteudo">
+                <h2>Nossa História</h2>
+
+                <p>
+                    O Bella Tavola nasceu da paixão pela culinária italiana.
+                    Nosso objetivo é proporcionar momentos especiais,
+                    com receitas tradicionais, ingredientes selecionados
+                    e muito carinho em cada prato.
+                </p>
+
+                <p>
+                    Mais do que um restaurante, somos um lugar para
+                    compartilhar sabores e criar boas lembranças.
+                </p>
+            </div>
+        </section>
+
+        <!-- AVALIAÇÕES DEMONSTRATIVAS -->
+        <section id="avaliacoes">
+            <h2>O que dizem nossos clientes</h2>
+
+            <p class="subtitulo-avaliacoes">
+                Experiências especiais merecem ser compartilhadas.
+            </p>
+
+            <div class="avaliacoes-container">
+
+                <div class="avaliacao">
+                    <div class="estrelas">★★★★★</div>
+                    <p>"Comida maravilhosa e ambiente muito aconchegante!"</p>
+                    <h3>Mariana Silva</h3>
+                    <span>Cliente demonstrativa</span>
+                </div>
+
+                <div class="avaliacao">
+                    <div class="estrelas">★★★★★</div>
+                    <p>"Uma experiência italiana incrível. Recomendo!"</p>
+                    <h3>Lucas Almeida</h3>
+                    <span>Cliente demonstrativo</span>
+                </div>
+
+                <div class="avaliacao">
+                    <div class="estrelas">★★★★★</div>
+                    <p>"Atendimento excelente e pratos deliciosos!"</p>
+                    <h3>Camila Costa</h3>
+                    <span>Cliente demonstrativa</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- GALERIA -->
+        <section id="galeria">
+            <h2>Um pouco do Bella Tavola</h2>
+
+            <p class="subtitulo-galeria">
+                Conheça nossos sabores e nosso ambiente.
+            </p>
+
+            <div class="galeria-container">
+
+                <div class="foto-galeria">
+                    <img
+                        src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=900&q=85"
+                        alt="Pizza italiana">
+                </div>
+
+                <div class="foto-galeria">
+                    <img
+                        src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=900&q=85"
+                        alt="Prato de massa italiana">
+                </div>
+
+                <div class="foto-galeria">
+                    <img
+                        src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?auto=format&fit=crop&w=900&q=85"
+                        alt="Risotto especial">
+                </div>
+
+                <div class="foto-galeria">
+                    <img
+                        src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=900&q=85"
+                        alt="Ambiente de restaurante">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PERGUNTAS FREQUENTES -->
+        <section id="faq">
+            <h2>Perguntas Frequentes</h2>
+
+            <div class="faq-container">
+
+                <details>
+                    <summary>Quais são os horários de funcionamento?</summary>
+                    <p>Funcionamos de terça a domingo, das 18h às 23h.</p>
+                </details>
+
+                <details>
+                    <summary>É necessário fazer reserva?</summary>
+                    <p>Recomendamos fazer uma reserva para garantir sua mesa.</p>
+                </details>
+
+                <details>
+                    <summary>O restaurante aceita crianças?</summary>
+                    <p>Sim! Toda a família é bem-vinda ao Bella Tavola.</p>
+                </details>
+
+                <details>
+                    <summary>Onde fica o restaurante?</summary>
+                    <p>Entre em contato conosco para conhecer nossa localização.</p>
+                </details>
+
+            </div>
+        </section>
+
+        <!-- RESERVAS -->
+        <section id="contato">
+            <h2>Reserve sua Mesa</h2>
+
+            <p>Será um prazer receber você no Bella Tavola!</p>
+
+            <form id="formReserva">
+
+                <input
+                    type="text"
+                    id="nome"
+                    placeholder="Seu nome"
+                    required
+                    minlength="3">
+
+                <input
+                    type="tel"
+                    id="telefone"
+                    placeholder="Seu telefone (ex: 82999999999)"
+                    required
+                    minlength="10"
+                    maxlength="11">
+
+                <input type="date" id="data" required>
+
+                <input type="time" id="horario" required>
+
+                <select id="pessoas" required>
+                    <option value="">Quantidade de pessoas</option>
+                    <option value="1">1 pessoa</option>
+                    <option value="2">2 pessoas</option>
+                    <option value="3">3 pessoas</option>
+                    <option value="4">4 pessoas</option>
+                    <option value="5">5 pessoas</option>
+                    <option value="6">6 pessoas</option>
+                </select>
+
+                <button type="submit">
+                    Solicitar Reserva
+                </button>
+
+            </form>
+
+            <p id="mensagem" aria-live="polite"></p>
+        </section>
+
+        <!-- FALE CONOSCO -->
+        <section id="fale-conosco">
+            <h2>Fale Conosco</h2>
+
+            <p>Tem alguma dúvida? Envie uma mensagem para nós!</p>
+
+            <form id="formContato">
+
+                <label for="nomeContato">Nome</label>
+                <input
+                    type="text"
+                    id="nomeContato"
+                    placeholder="Seu nome"
+                    required>
+
+                <label for="emailContato">E-mail</label>
+                <input
+                    type="email"
+                    id="emailContato"
+                    placeholder="Seu e-mail"
+                    required>
+
+                <label for="assuntoContato">Assunto</label>
+                <input
+                    type="text"
+                    id="assuntoContato"
+                    placeholder="Assunto"
+                    required>
+
+                <label for="textoContato">Mensagem</label>
+                <textarea
+                    id="textoContato"
+                    placeholder="Escreva sua mensagem"
+                    required></textarea>
+
+                <button type="submit">Enviar mensagem</button>
+
+            </form>
+
+            <p id="mensagemContato" aria-live="polite"></p>
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <h2>Bella Tavola</h2>
+
+        <p>Uma experiência italiana inesquecível.</p>
+
+        <p>Funcionamento: Terça a Domingo, das 18h às 23h</p>
+
+        <p>© 2026 Bella Tavola. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- WHATSAPP -->
+    <a
+        href="https://wa.me/5500000000000"
+        class="whatsapp-flutuante"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Entre em contato pelo WhatsApp">
+        WhatsApp
+    </a>
+
+    <!-- VOLTAR AO TOPO -->
+    <a href="#inicio" class="voltar-topo" aria-label="Voltar ao topo">
+        ↑
+    </a>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

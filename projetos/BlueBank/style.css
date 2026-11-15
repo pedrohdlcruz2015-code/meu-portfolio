@@ -1,0 +1,424 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #eef3f9;
+    font-family: Arial, sans-serif;
+    color: #172b4d;
+}
+
+/* CABEÇALHO */
+
+header {
+    background-color: #102b50;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+/* MENU */
+
+.menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.menu button {
+    flex: 1;
+    max-width: 160px;
+    padding: 13px;
+    background-color: #174b85;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+main {
+    width: 90%;
+    max-width: 700px;
+    margin: 35px auto;
+}
+
+/* BOTÕES */
+
+button {
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #1674d1;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #105ba8;
+}
+
+/* SALDO */
+
+.saldo {
+    background-color: #174b85;
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.saldo h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.saldo p {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* AÇÕES */
+
+.acoes {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* EXTRATO */
+
+.extrato {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.extrato h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+#filtroMovimentacoes {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 18px;
+    border: 1px solid #d5deea;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+}
+
+#movimentacoes p {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f1f5fa;
+    border-radius: 8px;
+    border-left: 4px solid #1674d1;
+    font-size: 15px;
+}
+
+/* CARTÕES */
+
+.cartoes {
+    margin-top: 25px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.cartoes h2 {
+    margin-bottom: 20px;
+}
+
+.cartao-virtual {
+    background: linear-gradient(135deg, #102b50, #1674d1);
+    color: white;
+    padding: 25px;
+    border-radius: 15px;
+    max-width: 380px;
+    min-height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 8px 18px rgba(16, 43, 80, 0.25);
+}
+
+.cartao-virtual h3 {
+    font-size: 22px;
+}
+
+.dados-cartao {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* PERFIL */
+
+.perfil {
+    margin-top: 25px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.perfil h2 {
+    margin-bottom: 20px;
+}
+
+.perfil-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 55px;
+    height: 55px;
+    background-color: #1674d1;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.perfil-info p {
+    color: #718096;
+    margin-top: 5px;
+}
+
+.informacoes-conta {
+    background-color: #f1f5f9;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.informacoes-conta p {
+    margin: 12px 0;
+    color: #334155;
+}
+
+.perfil button {
+    margin-top: 20px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.botao-editar {
+    background-color: #1674d1;
+}
+
+.botao-sair {
+    background-color: #dc3545;
+}
+
+.botao-sair:hover {
+    background-color: #b02a37;
+}
+
+/* CADASTRO E LOGIN */
+
+#telaCadastro,
+#telaLogin {
+    min-height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #102b50, #1674d1);
+}
+
+#telaCadastro {
+    display: flex;
+}
+
+.formulario-cadastro {
+    background-color: white;
+    width: 100%;
+    max-width: 420px;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.formulario-cadastro h1 {
+    color: #174b85;
+    margin-bottom: 10px;
+}
+
+.formulario-cadastro > p {
+    color: #718096;
+    margin-bottom: 25px;
+}
+
+#formCadastro,
+#formLogin {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+#formCadastro input,
+#formLogin input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d5deea;
+    border-radius: 9px;
+    font-size: 15px;
+    outline: none;
+}
+
+#formCadastro input:focus,
+#formLogin input:focus {
+    border-color: #1674d1;
+}
+
+#mensagemCadastro,
+#mensagemLogin {
+    font-size: 14px;
+    color: #d12c2c;
+}
+
+/* DASHBOARD */
+
+.dashboard {
+    margin-bottom: 25px;
+}
+
+.dashboard h2 {
+    color: #1e293b;
+    margin-bottom: 18px;
+}
+
+.resumo-card {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    border-left: 5px solid #1976d2;
+}
+
+.resumo-card h3 {
+    color: #64748b;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.resumo-card p {
+    color: #1e293b;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* GRÁFICO */
+
+.grafico {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.grafico h3 {
+    color: #1e293b;
+    margin-bottom: 20px;
+}
+
+.barra-container {
+    margin-bottom: 20px;
+}
+
+.barra-container p {
+    margin-bottom: 8px;
+    color: #475569;
+}
+
+.barra {
+    width: 100%;
+    height: 14px;
+    background-color: #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#barraEntradas {
+    width: 0;
+    height: 100%;
+    background-color: #16a34a;
+    border-radius: 20px;
+    transition: width 0.5s;
+}
+
+#barraSaidas {
+    width: 0;
+    height: 100%;
+    background-color: #dc3545;
+    border-radius: 20px;
+    transition: width 0.5s;
+}
+
+/* CELULAR */
+
+@media (max-width: 500px) {
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    main {
+        width: 92%;
+        margin: 20px auto;
+    }
+
+    .saldo p {
+        font-size: 27px;
+    }
+
+    .acoes {
+        flex-direction: column;
+    }
+
+    .menu button {
+        min-width: 120px;
+    }
+
+    .formulario-cadastro {
+        padding: 25px;
+    }
+
+    .dados-cartao {
+        font-size: 9px;
+    }
+
+}

@@ -1,0 +1,1203 @@
+
+/* ==========================================
+   BELLA TAVOLA - CONFIGURAÇÕES GERAIS
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #f8f5ed;
+    color: #263b2d;
+    line-height: 1.6;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+    outline: 3px solid #c49a45;
+    outline-offset: 4px;
+}
+
+
+/* ==========================================
+   CABEÇALHO
+========================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #244536;
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 8%;
+    gap: 20px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+header h1 {
+    color: #d6b36a;
+    font-size: 28px;
+    white-space: nowrap;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #d6b36a;
+}
+
+
+/* ==========================================
+   SELETOR DE TEMA
+========================================== */
+
+.seletor-tema {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.seletor-tema button {
+    width: 42px;
+    height: 42px;
+    border: 2px solid #c49a45;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 19px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.seletor-tema button:hover {
+    background-color: #c49a45;
+    transform: scale(1.1);
+}
+
+
+/* ==========================================
+   MENU MOBILE
+========================================== */
+
+.menu-mobile {
+    display: none;
+    background: none;
+    border: none;
+    color: #d6b36a;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   INÍCIO
+========================================== */
+
+#inicio {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #263f31;
+    color: white;
+}
+
+#inicio h2 {
+    font-size: 52px;
+    max-width: 750px;
+    margin-bottom: 20px;
+    animation: aparecer 1s ease forwards;
+}
+
+#inicio p {
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    animation: aparecer 1.3s ease forwards;
+}
+
+#inicio a {
+    background-color: #d8bd83;
+    color: #183629;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+    animation: aparecer 1.6s ease forwards;
+}
+
+#inicio a:hover {
+    background-color: #f0dfb6;
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================
+   CARDÁPIO
+========================================== */
+
+#cardapio {
+    padding: 90px 8%;
+    text-align: center;
+    background-color: #f8f5ed;
+}
+
+#cardapio h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: #183629;
+}
+
+#cardapio > p {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.pratos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.prato {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #e5dfd1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.prato:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.prato img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+    margin-bottom: 18px;
+}
+
+.prato h3 {
+    font-size: 23px;
+    margin-bottom: 15px;
+    color: #183629;
+}
+
+.prato p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.prato span {
+    color: #9a7535;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   FILTROS DO CARDÁPIO
+========================================== */
+
+.filtros-cardapio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.filtro {
+    padding: 12px 24px;
+    border: 2px solid #244536;
+    border-radius: 25px;
+    background-color: transparent;
+    color: #244536;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filtro:hover {
+    background-color: #c49a45;
+    border-color: #c49a45;
+    color: white;
+}
+
+.filtro.ativo {
+    background-color: #244536;
+    color: white;
+}
+
+
+/* ==========================================
+   PESQUISA DO CARDÁPIO
+========================================== */
+
+.pesquisa-cardapio {
+    max-width: 500px;
+    margin: 25px auto;
+}
+
+.pesquisa-cardapio input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 2px solid #d5cdbd;
+    border-radius: 30px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.pesquisa-cardapio input:focus {
+    border-color: #c49a45;
+    box-shadow: 0 0 0 3px rgba(196, 154, 69, 0.18);
+}
+
+#nenhumPrato {
+    color: #9a7535;
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   BOTÃO DO CARDÁPIO PDF
+========================================== */
+
+.botao-cardapio-pdf {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+    background-color: #244536;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #c49a45;
+    transition: 0.3s;
+}
+
+.botao-cardapio-pdf:hover {
+    background-color: #c49a45;
+    color: #244536;
+    transform: translateY(-3px);
+}
+
+
+/* ==========================================
+   SOBRE
+========================================== */
+
+#sobre {
+    background-color: #f0eadf;
+    padding: 90px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-conteudo {
+    max-width: 850px;
+    width: 100%;
+    background-color: white;
+    padding: 50px;
+    border-left: 5px solid #c49a52;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.sobre-conteudo h2 {
+    color: #244536;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+.sobre-conteudo p {
+    color: #555;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+
+/* ==========================================
+   AVALIAÇÕES
+========================================== */
+
+#avaliacoes {
+    background-color: #f8f5ef;
+    padding: 80px 8%;
+    text-align: center;
+}
+
+#avaliacoes h2 {
+    color: #244536;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.subtitulo-avaliacoes {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.avaliacoes-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.avaliacao {
+    background-color: white;
+    padding: 30px 22px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.avaliacao:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.estrelas {
+    color: #d6a83f;
+    font-size: 25px;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.avaliacao p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.avaliacao h3 {
+    color: #244536;
+    margin-bottom: 6px;
+}
+
+.avaliacao span {
+    color: #999;
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   GALERIA
+========================================== */
+
+#galeria {
+    background-color: white;
+    padding: 80px 8%;
+    text-align: center;
+}
+
+#galeria h2 {
+    color: #244536;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.subtitulo-galeria {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.foto-galeria {
+    height: 300px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.1);
+}
+
+.foto-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.foto-galeria:hover img {
+    transform: scale(1.08);
+}
+
+
+/* ==========================================
+   PERGUNTAS FREQUENTES
+========================================== */
+
+#faq {
+    padding: 70px 20px;
+    background-color: #f5f0e6;
+    text-align: center;
+}
+
+#faq h2 {
+    color: #244536;
+    margin-bottom: 35px;
+}
+
+.faq-container {
+    max-width: 750px;
+    margin: auto;
+    text-align: left;
+}
+
+.faq-container details {
+    background-color: white;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.faq-container summary {
+    color: #244536;
+    font-weight: bold;
+    cursor: pointer;
+    list-style-position: inside;
+}
+
+.faq-container details p {
+    color: #555;
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.faq-container details[open] {
+    border-left: 4px solid #c49a45;
+    transform: translateY(-2px);
+}
+
+.faq-container details[open] summary {
+    color: #9a7535;
+}
+
+
+/* ==========================================
+   RESERVAS
+========================================== */
+
+#contato {
+    padding: 90px 20px;
+    background-color: #eee9dc;
+    text-align: center;
+}
+
+#contato h2 {
+    font-size: 42px;
+    color: #183629;
+    margin-bottom: 15px;
+}
+
+#contato > p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+#formReserva {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+#formReserva input,
+#formReserva select {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #d5cdbd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    color: #263b2d;
+}
+
+#formReserva button {
+    padding: 17px;
+    background-color: #183629;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#formReserva button:hover {
+    background-color: #315a43;
+    transform: translateY(-2px);
+}
+
+#mensagem {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #183629;
+}
+
+
+/* ==========================================
+   FALE CONOSCO
+========================================== */
+
+#fale-conosco {
+    padding: 70px 20px;
+    background-color: #f5f0e6;
+    text-align: center;
+}
+
+#fale-conosco h2 {
+    color: #244536;
+    margin-bottom: 15px;
+}
+
+#fale-conosco > p {
+    color: #555;
+    margin-bottom: 25px;
+}
+
+#formContato {
+    max-width: 550px;
+    margin: auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    text-align: left;
+}
+
+#formContato label {
+    display: block;
+    color: #244536;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+#formContato input,
+#formContato textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background-color: white;
+    color: #263b2d;
+    transition: 0.2s;
+}
+
+#formContato textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#formContato input:focus,
+#formContato textarea:focus {
+    outline: none;
+    border-color: #c49a45;
+    box-shadow: 0 0 0 3px rgba(196, 154, 69, 0.18);
+}
+
+#formContato input::placeholder,
+#formContato textarea::placeholder {
+    color: #999;
+}
+
+#formContato button {
+    width: 100%;
+    background-color: #244536;
+    color: white;
+    border: none;
+    padding: 14px 25px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#formContato button:hover {
+    background-color: #c49a45;
+    color: #183629;
+}
+
+#mensagemContato {
+    margin-top: 20px;
+    font-weight: bold;
+    color: #244536;
+}
+
+
+/* ==========================================
+   RODAPÉ
+========================================== */
+
+footer {
+    background-color: #10271d;
+    color: #f8f5ed;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer h2 {
+    color: #e8d5a5;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    font-size: 15px;
+    margin-top: 12px;
+    line-height: 1.6;
+}
+
+
+/* ==========================================
+   BOTÃO WHATSAPP
+========================================== */
+
+.whatsapp-flutuante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 2000;
+    background-color: #25D366;
+    color: white;
+    padding: 15px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.whatsapp-flutuante:hover {
+    background-color: #1ebe5d;
+    transform: scale(1.08);
+}
+
+
+/* ==========================================
+   BOTÃO VOLTAR AO TOPO
+========================================== */
+
+.voltar-topo {
+    position: fixed;
+    bottom: 90px;
+    right: 25px;
+    width: 45px;
+    height: 45px;
+    background-color: #244536;
+    color: #d4af62;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 26px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.voltar-topo:hover {
+    background-color: #d4af62;
+    color: #244536;
+    transform: translateY(-5px);
+}
+
+
+/* ==========================================
+   ANIMAÇÕES
+========================================== */
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#cardapio h2,
+#sobre h2,
+#contato h2 {
+    animation: aparecer 1s ease forwards;
+}
+
+.revelar {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.revelar.visivel {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==========================================
+   MODO ESCURO
+========================================== */
+
+body.tema-escuro {
+    background-color: #141c18;
+    color: #e5e9e5;
+}
+
+/* Seções */
+
+body.tema-escuro #cardapio,
+body.tema-escuro #avaliacoes,
+body.tema-escuro #fale-conosco,
+body.tema-escuro #faq {
+    background-color: #19231d;
+}
+
+body.tema-escuro #sobre,
+body.tema-escuro #contato {
+    background-color: #202c25;
+}
+
+body.tema-escuro #galeria {
+    background-color: #18221c;
+}
+
+/* Títulos */
+
+body.tema-escuro #cardapio h2,
+body.tema-escuro #sobre h2,
+body.tema-escuro #avaliacoes h2,
+body.tema-escuro #galeria h2,
+body.tema-escuro #contato h2,
+body.tema-escuro #fale-conosco h2,
+body.tema-escuro #faq h2 {
+    color: #e8d5a5;
+}
+
+/* Textos */
+
+body.tema-escuro #cardapio > p,
+body.tema-escuro .prato p,
+body.tema-escuro .sobre-conteudo p,
+body.tema-escuro .subtitulo-avaliacoes,
+body.tema-escuro .avaliacao p,
+body.tema-escuro .subtitulo-galeria,
+body.tema-escuro #contato > p,
+body.tema-escuro #fale-conosco > p,
+body.tema-escuro .faq-container details p {
+    color: #c1cbc3;
+}
+
+/* Cartões */
+
+body.tema-escuro .prato,
+body.tema-escuro .sobre-conteudo,
+body.tema-escuro .avaliacao,
+body.tema-escuro #formContato,
+body.tema-escuro .faq-container details {
+    background-color: #26352c;
+    border-color: #46594b;
+}
+
+/* Títulos dos cartões */
+
+body.tema-escuro .prato h3,
+body.tema-escuro .avaliacao h3,
+body.tema-escuro .faq-container summary,
+body.tema-escuro #formContato label {
+    color: #e8d5a5;
+}
+
+/* Formulários */
+
+body.tema-escuro #formReserva input,
+body.tema-escuro #formReserva select,
+body.tema-escuro #formContato input,
+body.tema-escuro #formContato textarea {
+    background-color: #18231c;
+    color: #f1f1f1;
+    border-color: #536456;
+}
+
+body.tema-escuro #formContato input::placeholder,
+body.tema-escuro #formContato textarea::placeholder {
+    color: #aeb8b0;
+}
+
+/* Mensagens */
+
+body.tema-escuro #mensagem,
+body.tema-escuro #mensagemContato {
+    color: #e8d5a5 !important;
+}
+
+/* Filtros */
+
+body.tema-escuro .filtro {
+    color: #e8d5a5;
+    border-color: #c49a45;
+}
+
+body.tema-escuro .filtro.ativo {
+    background-color: #c49a45;
+    color: #18231c;
+}
+
+/* PDF */
+
+body.tema-escuro .botao-cardapio-pdf {
+    background-color: #c49a45;
+    color: #18231c;
+}
+
+/* FAQ */
+
+body.tema-escuro .faq-container details[open] {
+    border-left-color: #e8d5a5;
+}
+
+body.tema-escuro .faq-container details[open] summary {
+    color: #e8d5a5;
+}
+
+/* Seletor de tema */
+
+body.tema-escuro .seletor-tema button {
+    background-color: #c49a45;
+}
+
+/* Pesquisa */
+
+body.tema-escuro .pesquisa-cardapio input {
+    background-color: #18231c;
+    color: white;
+    border-color: #536456;
+}
+
+body.tema-escuro .pesquisa-cardapio input::placeholder {
+    color: #aeb8b0;
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE - TABLETS E CELULARES
+========================================== */
+
+@media (max-width: 1000px) {
+
+    header {
+        padding: 18px 5%;
+    }
+
+    header nav {
+        gap: 14px;
+    }
+
+    header nav a {
+        font-size: 14px;
+    }
+
+    .pratos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .avaliacoes-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+/* ==========================================
+   RESPONSIVIDADE - MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    html {
+        scroll-padding-top: 80px;
+    }
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 15px 5%;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .menu-mobile {
+        display: block;
+        order: 3;
+    }
+
+    .seletor-tema {
+        order: 2;
+    }
+
+    .seletor-tema button {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+
+    header nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #244536;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 20px;
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    header nav.aberto {
+        display: flex;
+    }
+
+    header nav a {
+        font-size: 16px;
+    }
+
+    #inicio {
+        min-height: 75vh;
+        padding: 60px 20px;
+    }
+
+    #inicio h2 {
+        font-size: 36px;
+    }
+
+    #inicio p {
+        font-size: 16px;
+    }
+
+    #cardapio {
+        padding: 60px 20px;
+    }
+
+    #cardapio h2,
+    #contato h2 {
+        font-size: 34px;
+    }
+
+    .pratos {
+        grid-template-columns: 1fr;
+    }
+
+    .prato {
+        padding: 20px;
+    }
+
+    #sobre {
+        padding: 50px 20px;
+    }
+
+    .sobre-conteudo {
+        padding: 25px;
+    }
+
+    #avaliacoes,
+    #galeria {
+        padding: 60px 20px;
+    }
+
+    .avaliacoes-container {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-container {
+        grid-template-columns: 1fr;
+    }
+
+    .foto-galeria {
+        height: 250px;
+    }
+
+    #contato {
+        padding: 60px 20px;
+    }
+
+    #contato form {
+        width: 100%;
+    }
+
+    #fale-conosco {
+        padding: 50px 15px;
+    }
+
+    #formContato {
+        padding: 22px;
+    }
+
+    #formContato button {
+        width: 100%;
+    }
+
+    #faq {
+        padding: 50px 20px;
+    }
+
+    .whatsapp-flutuante {
+        bottom: 15px;
+        right: 15px;
+        padding: 12px 17px;
+    }
+
+    .voltar-topo {
+        bottom: 75px;
+        right: 18px;
+    }
+
+}
+
+
+/* ==========================================
+   CELULARES PEQUENOS
+========================================== */
+
+@media (max-width: 400px) {
+
+    header {
+        padding: 13px 3%;
+        gap: 6px;
+    }
+
+    header h1 {
+        font-size: 19px;
+    }
+
+    .seletor-tema {
+        gap: 4px;
+    }
+
+    .seletor-tema button {
+        width: 32px;
+        height: 32px;
+        font-size: 14px;
+    }
+
+    .menu-mobile {
+        font-size: 26px;
+    }
+
+    #inicio h2 {
+        font-size: 30px;
+    }
+
+    .filtro {
+        padding: 10px 17px;
+        font-size: 14px;
+    }
+
+    .sobre-conteudo {
+        padding: 20px;
+    }
+
+}
+
+
+/* ==========================================
+   ACESSIBILIDADE - REDUZIR ANIMAÇÕES
+========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .revelar {
+        opacity: 1;
+        transform: none;
+    }
+
+}
