@@ -177,16 +177,125 @@ section h2 {
     color: #0b1120;
 }
 
+/* SERVIÇOS */
+
+#servicos {
+    background-color: #0b1120;
+}
+
+.servicos-descricao {
+    color: #cbd5e1;
+    max-width: 700px;
+    margin: 0 auto 35px;
+    font-size: 18px;
+}
+
+.servicos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.servico-card {
+    background-color: #111c30;
+    border: 1px solid #263750;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: left;
+    transition: 0.3s;
+}
+
+.servico-card:hover {
+    transform: translateY(-7px);
+    border-color: #60a5fa;
+}
+
+.servico-card h3 {
+    color: #60a5fa;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.servico-card p {
+    color: #cbd5e1;
+}
+
 /* HABILIDADES */
 
 #habilidades {
     background-color: #111c30;
 }
 
+.habilidades-descricao {
+    color: #cbd5e1;
+    margin-bottom: 35px;
+    font-size: 18px;
+}
+
+.habilidades-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.habilidade-card {
+    background-color: #0b1120;
+    border: 1px solid #263750;
+    border-radius: 12px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
+.habilidade-card:hover {
+    transform: translateY(-7px);
+    border-color: #60a5fa;
+}
+
+.habilidade-card h3 {
+    color: #60a5fa;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+.habilidade-card p {
+    color: #cbd5e1;
+}
+
+#habilidades {
+    background-color: #111c30;
+}
 /* CONTATO */
 
 #contato {
     background-color: #0b1120;
+}
+
+.contato-descricao {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+.contato-botao {
+    display: inline-block;
+    background-color: #2563eb;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 7px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.contato-botao:hover {
+    background-color: #60a5fa;
+    color: #0b1120;
+    transform: translateY(-3px);
 }
 
 /* RODAPÉ */
@@ -202,6 +311,14 @@ footer {
 /* RESPONSIVIDADE */
 
 @media (max-width: 768px) {
+
+    .habilidades-container {
+    grid-template-columns: 1fr;
+}
+
+    .servicos-container {
+    grid-template-columns: 1fr;
+}
 
     header {
         flex-direction: column;
