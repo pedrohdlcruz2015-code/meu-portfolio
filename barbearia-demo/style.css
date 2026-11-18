@@ -1,0 +1,279 @@
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* MENU */
+
+header {
+    background-color: #080808;
+    padding: 22px 8%;
+    border-bottom: 1px solid #bd9148;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.logo span {
+    color: #c49a52;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #c49a52;
+}
+
+/* INÍCIO */
+
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.95),
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1")
+        center / cover no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.subtitulo {
+    color: #c49a52;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.hero h2 {
+    font-size: 58px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero-content > p:not(.subtitulo) {
+    color: #cccccc;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.botao {
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: #c49a52;
+    color: #111111;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #ffffff;
+}
+
+/* SOBRE */
+
+.sobre {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.sobre h2,
+.servicos h2,
+.contato h2 {
+    color: #c49a52;
+    font-size: 34px;
+    margin-bottom: 25px;
+}
+
+.sobre p {
+    max-width: 700px;
+    margin: auto;
+    color: #cccccc;
+    line-height: 1.8;
+}
+
+/* SERVIÇOS */
+
+.servicos {
+    padding: 80px 8%;
+    background-color: #191919;
+    text-align: center;
+}
+
+.servicos-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.servico {
+    background-color: #242424;
+    border: 1px solid #574329;
+    padding: 35px;
+    width: 280px;
+    transition: 0.3s;
+    border-radius: 12px;
+}
+
+.servico:hover {
+    transform: translateY(-8px);
+    border-color: #c49a52;
+}
+
+.servico h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.servico p {
+    color: #bbbbbb;
+    margin-bottom: 20px;
+}
+
+.servico strong {
+    color: #c49a52;
+    font-size: 22px;
+}
+
+/* CONTATO */
+
+.contato {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.contato p {
+    color: #cccccc;
+}
+.contato .botao {
+    margin-top: 25px;
+}
+
+/* RODAPÉ */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background-color: #080808;
+    color: #888888;
+    border-top: 1px solid #bd9148;
+    font-size: 14px;
+}
+
+/* CELULARES */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 450px;
+        padding: 60px 7%;
+    }
+
+    .hero h2 {
+        font-size: 39px;
+    }
+
+    .sobre h2,
+    .servicos h2,
+    .contato h2 {
+        font-size: 28px;
+    }
+}
+
+
+
+/* GALERIA */
+
+.galeria {
+    padding: 80px 8%;
+    text-align: center;
+    background-color: #111111;
+}
+
+.galeria h2 {
+    color: #c49a52;
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.galeria > p {
+    color: #cccccc;
+    margin-bottom: 35px;
+}
+
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.galeria-container img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border: 1px solid #c49a52;
+    transition: 0.3s;
+    border-radius: 12px;
+}
+
+.galeria-container img:hover {
+    transform: scale(1.03);
+}
+
+@media (max-width: 700px) {
+    .galeria-container {
+        grid-template-columns: 1fr;
+    }
+}
